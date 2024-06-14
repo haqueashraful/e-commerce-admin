@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_cats",
+  "info": {
+    "singularName": "sub-cat",
+    "pluralName": "sub-cats",
+    "displayName": "sub-cat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "sub_cats"
+    }
+  }
+}
